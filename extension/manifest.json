@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 单对话导出",
+  "version": "0.1.0",
+  "description": "点击导出当前 ChatGPT 对话：完整正文、JSON 与能取回的附件，保存为一个 ZIP。无需服务器或脚本管理器。",
+  "minimum_chrome_version": "120",
+  "permissions": ["activeTab", "scripting"],
+  "background": {"service_worker": "background.mjs", "type": "module"},
+  "action": {"default_title": "导出当前 ChatGPT 对话"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'"}
+}
